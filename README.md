@@ -1,6 +1,6 @@
 # Tower Defence Game
 
-A 2D tower defence game I made in C# with Windows Forms for my college Computer Science coursework (2022–2023).
+A basic 2D tower defence game I made in C# with Windows Forms for my college Computer Science coursework (2022–2023).
 
 Enemies run towards your main building. Place towers to stop them before they reach it. If your building loses all its health, you lose.
 
