@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D632318D-F52A-47BA-A877-0417A2B767DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TowerDefence</RootNamespace>
+    <AssemblyName>TowerDefence</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicTower.cs" />
+    <Compile Include="BasicTowerBullet.cs" />
+    <Compile Include="BigEnemy.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="CollisionManager.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="EnemyMovement.cs" />
+    <Compile Include="ErrorCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorCheck.Designer.cs">
+      <DependentUpon>ErrorCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighScores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScores.Designer.cs">
+      <DependentUpon>HighScores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowToPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HowToPlay.Designer.cs">
+      <DependentUpon>HowToPlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightningTower.cs" />
+    <Compile Include="LightningTowerBullet.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClickTowerBullet.cs" />
+    <Compile Include="ClickTower.cs" />
+    <Compile Include="Obstacle.cs" />
+    <Compile Include="SmallEnemy.cs" />
+    <Compile Include="TowerDefence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TowerDefence.Designer.cs">
+      <DependentUpon>TowerDefence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpawnManager.cs" />
+    <Compile Include="Tower.cs" />
+    <EmbeddedResource Include="ErrorCheck.resx">
+      <DependentUpon>ErrorCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScores.resx">
+      <DependentUpon>HighScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowToPlay.resx">
+      <DependentUpon>HowToPlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TowerDefence.resx">
+      <DependentUpon>TowerDefence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainBuilding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purpleSquare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tower2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\obstacle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lighningTower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newExplosion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YouWin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YouLose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BasicTowerMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BasicTowerstat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BasicTowerShoot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-2.png %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-2.png %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-3.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-3.png %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-4.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixil-frame-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserRedDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserRedLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaserRedRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaserRedUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel %283%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mortar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mortar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClickTower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserGreen14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laserBlue08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnemyWalk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house1_complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewHouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Piskel-2.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold_21.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
