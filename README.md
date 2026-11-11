@@ -1,48 +1,37 @@
 # Tower Defence Game
 
-A basic 2D tower defence game I made in C# with Windows Forms for my college Computer Science coursework (2022–2023).
+This is the tower defence game I made for my A level Computer Science coursework (2022–2023). It's written in C# using Windows Forms.
 
-Enemies run towards your main building. Place towers to stop them before they reach it. If your building loses all its health, you lose.
+The idea is pretty simple: enemies walk towards your main building and you have to place towers to stop them before they get there. If the building runs out of health, you lose.
 
 ## How to play
 
-1. Start the game from the main menu. Read **How To Play** first, because the game asks you to before it lets you start.
-2. Collect coins as they appear and spend them on towers.
-3. Place towers around the map to shoot enemies before they reach the building.
-4. Survive all three levels to win, then enter a name (up to 5 characters) to save your score.
+When you start the game you'll need to read the How To Play screen first before it lets you play. After that:
 
-### Towers
+- Pick up coins as they appear and use them to buy towers
+- Put towers around the map to shoot the enemies
+- Get through all three levels to win, then type in a name (up to 5 letters) to save your score
 
-| Tower | Cost | What it does |
-| --- | --- | --- |
-| Basic Tower | 10 | Shoots a bullet in every direction |
-| Clicker Tower | 20 | Shoots a bullet wherever you click |
-| Mortar | 70 | Fires a shot that always hits an enemy |
+There are three towers:
 
-### Enemies
+- **Basic Tower** (10 coins) shoots in every direction
+- **Clicker Tower** (20 coins) shoots wherever you click
+- **Mortar** (70 coins) always hits an enemy, but it's expensive
 
-- **Small enemy**: weaker (50 health)
-- **Big enemy**: tougher (100 health)
+And two types of enemy, a small one with 50 health and a big one with 100. They don't attack your towers, they just go straight for the building, and they speed up the further you get.
 
-Enemies ignore your towers and head straight for the building. They get faster as the game goes on.
+## What's in it
 
-## Features
-
-- Main menu, How To Play screen and High Scores screen
-- Three levels with a countdown timer
-- Coin pickups to buy towers
-- Health bar for the main building
-- High scores saved to a local `Player Stats.csv` file
+- Main menu, How To Play and High Scores screens
+- Three levels, each with a countdown timer
+- Coins to collect and spend on towers
+- A health bar for the building
+- High scores saved to a `Player Stats.csv` file
 
 ## Running it
 
-Requirements: Windows, and Visual Studio with the .NET desktop development workload (.NET Framework 4.7.2).
+You'll need Windows and Visual Studio with the .NET desktop development workload installed (it uses .NET Framework 4.7.2).
 
-1. Clone the repo.
-2. Open `TowerDefence.sln` in Visual Studio.
-3. Press **F5** to build and run.
-
-## Built with
-
-- C#
-- Windows Forms (.NET Framework 4.7.2)
+1. Clone the repo
+2. Open `TowerDefence.sln` in Visual Studio
+3. Press F5 to build and run
